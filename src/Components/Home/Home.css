@@ -1,0 +1,368 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,600,700&display=swap');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif
+}
+
+.titulo {
+    text-align: left;
+    color: dodgerblue;
+    font-size: 40px;
+    font-weight: bold;
+    margin-top: 5px;
+    margin-right: 50px;
+
+}
+
+.porfin{
+    color: #000000;
+}
+
+
+.Registro {
+    color: dodgerblue;
+    margin-left: 20px;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+
+.input {
+    border: 1px solid rgb(0, 91, 182);
+    border-radius: 10px;
+    padding: 10px 15px;
+    width: 250px;
+    margin-left: 15px;
+    margin-right: 10px;
+    margin-top: 15px;
+}
+
+.no-link-style {
+    cursor: pointer;
+    text-decoration: none;
+    color: inherit;
+
+}
+
+body {
+    margin: 5px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    background-color: #ffffff;
+    height: 100vh;
+}
+
+.Envio {
+    margin-top: 50px;
+}
+
+.enviar {
+    position: relative;
+    display: grid;
+    justify-content: center;
+    width: 100%;
+    gap: 40PX;
+}
+
+button {
+    padding: 0.6em 1em;
+    border: 4px solid rgb(20, 107, 194);
+    border-radius: 10px;
+    transition: ease-in-out 0.3s;
+    background-color: transparent;
+    color: dodgerblue;
+    font-weight: bolder;
+    font-size: 16px;
+}
+
+
+button:hover {
+    transform: scale(1.2) rotate(0deg);
+    background-color: rgb(20, 107, 194);
+    color: white;
+}
+
+ul {
+    padding: 0;
+    list-style-type: none;
+}
+
+.mi-lista li {
+    display: inline-block;
+    margin: 10px;
+    padding: 0;
+}
+
+li {
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+    font-size: 25px;
+    width: 8em;
+    height: 2em;
+    text-align: center;
+    line-height: 2em;
+    font-family: sans-serif;
+    text-transform: capitalize;
+    position: relative;
+    transition: 0.5s;
+    margin: 0.8em;
+}
+
+li::before,
+li::after {
+    content: '';
+    position: absolute;
+    width: 0.6em;
+    height: 0.6em;
+    background-color: gainsboro;
+    border-radius: 50%;
+    transition: 0.5s cubic-bezier(0.5, -0.5, 0.25, 1.5);
+    top: calc(50% - 0.6em / 2);
+}
+
+li::before {
+    left: 0;
+    z-index: -1;
+}
+
+li::after {
+    right: 0;
+    z-index: -2;
+}
+
+li:hover {
+    color: white;
+}
+
+li:hover::before,
+li:hover::after {
+    width: 100%;
+    height: 100%;
+    border-radius: 0;
+    background-color: dodgerblue;
+}
+
+li:hover::before {
+    top: 0;
+}
+
+li:hover::after {
+    right: -0.4em;
+    filter: brightness(0.8);
+}
+
+.contenedor {
+    display: flex;
+    justify-content: space-between;
+}
+
+.square {
+    position: relative;
+    top: 50px;
+    margin: 0 10px;
+    width: 300px;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.square span:nth-child(1) {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border: 2px solid black;
+    border-radius: 32% 58% 69% 43% / 48% 32% 59% 55%;
+    transition: 0.5s;
+    animation: animate 6s linear infinite;
+}
+
+.colegio:hover span:nth-child(1) {
+    border: none;
+    background: rgb(20, 107, 194);
+}
+
+.square span:nth-child(2) {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 2px solid black;
+    border-radius: 38% 62% 63% 37% / 41% 44% 56% 59%;
+    transition: 0.5s;
+    animation: animate 6s linear infinite;
+}
+
+.colegio:hover span:nth-child(2) {
+    border: none;
+    background: rgb(20, 107, 194);
+}
+
+.square span:nth-child(3) {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 2px solid black;
+    border-radius: 31% 45% 74% 35% / 38% 56% 51% 87%;
+    transition: 0.5s;
+    animation: animate2 10s linear infinite;
+}
+
+.colegio:hover span:nth-child(3) {
+    border: none;
+    background: rgb(20, 107, 194);
+}
+
+.container {
+    position: relative;
+    padding: 40px 60px;
+    text-align: center;
+    transition: 0.5s;
+    z-index: 1000;
+}
+
+.square:hover {
+    color: white;
+}
+
+.container a {
+    position: relative;
+    display: inline-block;
+    margin-top: 30px;
+    border: 2px solid white;
+    padding: 6px 10px;
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: 600;
+    border-radius: 73% 27% 44% 56% / 49% 44% 56% 51%;
+}
+
+.container:hover {
+    color: #ffffff;
+}
+
+@keyframes animate {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes animate2 {
+    0% {
+        transform: rotate(360deg);
+    }
+
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+.wrapper {
+    width: 100%;
+    margin-top: 12px;
+    border-radius: 20px;
+    min-height: 20vh;
+    background: #ececec;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.navbar {
+    background: #fdfdfd;
+    display: inline-flex;
+    align-items: center;
+    padding: 10px 20px 15px;
+    box-shadow: 0px 20px 40px rgba(18, 34, 64, 0.1);
+    border-radius: 30px;
+    position: relative;
+}
+
+.navbar__item {
+    width: 70px;
+    height: 70px;
+    position: relative;
+    cursor: pointer;
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 25px;
+}
+
+.navbar__item::before,
+.navbar__item:after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: currentColor;
+    border-radius: 50%;
+    transform: scale(0.8);
+    opacity: 0;
+    transition: all 0.55s cubic-bezier(0.71, 0.03, 0.23, 0.95);
+}
+
+.navbar__item::after {
+    box-shadow: 0 7px 15px currentColor;
+}
+
+.navbar__item.-blue {
+    color: #721dfa;
+}
+
+.navbar__item.-orange {
+    color: #f2704d;
+}
+
+.navbar__item.-navy-blue {
+    color: #405fff;
+}
+
+.navbar__item.-black {
+    color: #000000;
+}
+
+.navbar__item:hover::before,
+.navbar__item:hover::after {
+    transform: translateY(-58px) scale(1.1);
+}
+
+.navbar__item:hover::before {
+    opacity: 1;
+}
+
+.navbar__item:hover::after {
+    opacity: 0.4;
+}
+
+.navbar__item:hover .navbar__icon {
+    transform: translateY(-58px) scale(1.25);
+    color: #fff;
+    transition-delay: 0.1s, 0.1s;
+}
+
+.navbar__icon {
+    transition: all 0.5s cubic-bezier(0.71, 0.03, 0.23, 0.95);
+    transition-delay: 0.1s;
+    display: inline-block;
+    position: relative;
+    z-index: 2;
+}
+
+.no-link-style{
+    color: #000000;
+}
